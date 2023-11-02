@@ -10,8 +10,14 @@ class Node<T> {
 
 class Source {
   public static int sumList(Node<Integer> head) {
-    // todo
-    return;
+    int sum = 0;
+    Node<Integer> temp = head;
+
+    while(temp!=null){
+      sum+=temp.val;
+      temp = temp.next;
+    }
+    return sum;
   }
 
   public static void main(String[] args) {
@@ -20,6 +26,12 @@ class Source {
     Node<Integer> c = new Node<>(3);
     Node<Integer> d = new Node<>(-1);
     Node<Integer> e = new Node<>(7);
+
+    /*Node<Integer> a = new Node<>(4);
+    Node<Integer> b = new Node<>(4);
+    Node<Integer> c = new Node<>(4);
+    Node<Integer> d = new Node<>(-8);
+    Node<Integer> e = new Node<>(-4);*/
 
     a.next = b;
     b.next = c;
